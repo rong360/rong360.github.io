@@ -2,6 +2,8 @@
 
 **包含了常用的 Dialog 弹框**
 
+![Alt text](https://rong360.github.io/rong-ui/assets/images/dialog.jpg)
+
 ### 基本用法
 
 #### 函数调用
