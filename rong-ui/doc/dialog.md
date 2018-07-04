@@ -41,7 +41,6 @@ dialog实例方法通过`子类组件`覆盖基类组件的的方式实现，因
 | titleStyleObj  | 标题样式    | Object   | — | {} |
 | showIcon  | 是否显示icon    | object   | — | `false` |
 | icon  | 弹框icon    | string   | `changgui` `shuxie` `beiju` `icon_url` | `changgui` |
-
 | showCancelBtn  | 是否显示取消按钮   | boolean   | — | `true` |
 | cancelBtnText  | 取消按钮文案    | string   | — | `取消` |
 | cancelBtnStyleObj  | 取消按钮样式    | object   | — | `false` |
