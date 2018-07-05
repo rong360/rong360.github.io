@@ -30,11 +30,23 @@ var dialog = this.$dialog({
 });
 ```
 
+#### 组件引入
+
+```
+import {Dialog} from "rong-ui"
+Vue.use(Dialog)
+
+<rDialog :showCancelBtn="false" @onConfirm="onConfirm" @onCancel="onCancel">
+    <div slot="content" class="hasread" @click="doRead">我已经阅读 <a href="javascript:;">《用户知情书》</a></div>
+</rDialog>
+
+```
+
 ### Attributes
 
 dialog实例方法通过`子类组件`覆盖基类组件的的方式实现，因此传入的对象是组件相关的一些属性：propsData、methods、computed、mounted...
 
-#### propsData属性传入的数据大致分以下几部分：弹窗标题`、`弹窗Icon`、`弹窗内容`、`弹窗按钮`
+#### propsData属性传入的数据大致分以下几部分：`弹窗标题`、`弹窗Icon`、`弹窗内容`、`弹窗按钮`
 
 | 参数      | 说明    | 类型      | 可选值       | 默认值   |
 |---------- |-------- |---------- |-------------  |-------- |
