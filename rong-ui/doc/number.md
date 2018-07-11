@@ -31,7 +31,7 @@ Vue.use(Number)
 | title | 表单label | string |  |  |
 | name  | 表单name    | string   |  |  |
 | type  | 键盘类型    | string   | `int` `float` `idcard` | `'float'` |
-| fixed  | 浮点数小数位位数    | number   |  |  |
+| fixed  | 浮点数小数位位数, `浮点数时有效`   | number   |  |  |
 | lr  | 数字输入框对齐方式    | string   | `left` `right` | `right` |
 | lblWidth | 输入左对齐时，label文案的宽度 | string | | eg. "3em"、"100px"|
 | placeholder  | 数字输入框提示文案    | string   | | `请输入` |
