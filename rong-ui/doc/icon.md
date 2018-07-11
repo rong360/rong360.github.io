@@ -30,7 +30,3 @@ Vue.use(rIcon)
 | iconClick  | 点击icon触发的回调函数  |  event |
 
 
-### slot
-| slot名称      | 说明    | 
-|---------- |-------- |
-| 不具名slot  | button内容    | 
