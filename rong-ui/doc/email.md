@@ -12,6 +12,10 @@
 ```js
 import {rEmail} from "rong-ui"
 
+or
+
+import rEmail from "rong-ui/components/rEmail"
+
 Vue.use(rEmail)
 ```
 ```html

@@ -6,6 +6,11 @@
 
 ```
 import {rButton} from "rong-ui"
+
+or
+
+import rButton from "rong-ui/components/rButton"
+
 Vue.use(rButton)
 
 <rButton type="warning" radius="on" fill="off" :btnStyle="btnStyle" @click="doClick">

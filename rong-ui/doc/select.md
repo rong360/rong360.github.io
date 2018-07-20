@@ -1,19 +1,30 @@
 ## select 下拉列表
 
+select使用了第三方better-picker模块来高仿IOS的UIPickerView组件，相关说明请[点击查看](https://github.com/ustbhuangyi/picker)
+
 ### 基本用法
 
 #### 全局组件引入
 
 
 ```js
+
 import {rSelect} from "rong-ui"
 
+or
+
+import rSelect from "rong-ui/components/rSelect"
+
 Vue.use(rSelect)
+
 ```
 ```html
+
 <rSelect :attrs="config" :ref="config.name"></rSelect>
+
 ```
 ```js
+
 config: {
 	title: "贷款期限",
 	name: "loan_term",
@@ -49,6 +60,7 @@ config: {
 		}
 	}
 }
+
 ```
 
 ### Attributes

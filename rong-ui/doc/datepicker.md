@@ -1,5 +1,7 @@
 ## Datepicker 日期
 
+Datepicker使用了第三方better-picker模块来高仿IOS的UIPickerView组件，相关说明请[点击查看](https://github.com/ustbhuangyi/picker)
+
 日期组件，如果需要作为表单组件，请自行扩展
 
 ### 基本用法
@@ -8,12 +10,21 @@
 
 
 ```js
+
 import {rDatepicker} from "rong-ui"
 
+or
+
+import rDatepicker from "rong-ui/components/rDatepicker"
+
+
 Vue.use(rDatepicker)
+
 ```
 ```html
+
 <rDatepicker :attrs='config'  @onconfirm="doConfirm"></rDatepicker>
+
 ```
 
 ```js

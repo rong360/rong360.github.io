@@ -9,7 +9,20 @@
 #### 函数调用
 挂载在vue.prototype上，vue实例中，直接使用this.$dialog({options})使用。
 
-```html
+```js
+
+import {Dialog} from "rong-ui"
+
+or
+
+import Dialog from "rong-ui/components/dialog"
+
+Vue.use(Dialog)
+
+```
+
+```js
+
 var dialog = this.$dialog({
 	propsData: {
 		//标题
@@ -28,13 +41,10 @@ var dialog = this.$dialog({
     	}
     }
 });
-```
-
-#### 组件引入
 
 ```
-import {Dialog} from "rong-ui"
-Vue.use(Dialog)
+
+```html
 
 <rDialog :showCancelBtn="false" @onConfirm="onConfirm" @onCancel="onCancel">
     <div slot="content" class="hasread" @click="doRead">我已经阅读 <a href="javascript:;">《用户知情书》</a></div>

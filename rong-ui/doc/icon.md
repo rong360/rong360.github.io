@@ -6,8 +6,14 @@
 
 ```
 import {rIcon} from "rong-ui"
-Vue.use(rIcon)
 
+or
+
+import rIcon from "rong-ui/components/rIcon"
+
+Vue.use(rIcon)
+```
+```
 <rIcon type="arrow-left" color="#4080e8"></rIcon>
 
 ```

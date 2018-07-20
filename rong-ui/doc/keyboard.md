@@ -7,6 +7,15 @@
 #### 函数调用
 挂载在vue.prototype上，vue实例中，直接使用this.$keyborad({options})使用。
 
+```js
+import {Keyboard} from "rong-ui"
+
+or
+
+import Keyboard from "rong-ui/components/keyboard"
+
+Vue.use(Keyboard)
+```
 ```html
 
 this.$keyboard({

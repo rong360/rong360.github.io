@@ -5,8 +5,18 @@
 #### 组件引入
 
 ```
+
 import {rTabs} from "rong-ui"
+
+or
+
+import rTabs from "rong-ui/components/rTabs"
+
 Vue.use(rTabs)
+
+```
+
+```html
 
 <rTabs value=2 @onclick="doClick">
 	<rTab label="极速贷" >

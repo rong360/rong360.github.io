@@ -8,9 +8,18 @@
 
 #### 组件引入
 
-```
+```js
+
 import {rTitlebar} from "rong-ui"
+
+or
+
+import rTitlebar from "rong-ui/components/rTitlebar"
+
 Vue.use(rTitlebar)
+
+```
+```html
 
 <rTitlebar theme="d" title="主题d">
     <div slot="l" @click="goHome">首页</div>

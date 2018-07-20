@@ -8,11 +8,18 @@
 
 
 ```js
+
 import {rNumber} from "rong-ui"
 
+or
+
+import rNumber from "rong-ui/components/rNumber"
+
 Vue.use(rNumber)
+
 ```
 ```html
+
 <rNumber 
     :attrs="config" 
     :ref="config.name" 
@@ -21,6 +28,30 @@ Vue.use(rNumber)
     @onclickInputIcon="InputIconHandle"
 >
 </rNumber>
+
+```
+
+```js
+... ...
+
+data(){
+	return {
+		config: {
+			title: "马云爸爸的年龄",
+			type: 'int',
+			name: 'fatherAge',
+			value: "",
+			placeholder: "请输入",
+			disabled: false,
+			readonly: false,
+			unit: '岁',
+			maxlength: 2,
+		}
+	}
+}
+ 
+... ...
+
 ```
 
 ### Attributes

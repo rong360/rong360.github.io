@@ -7,6 +7,16 @@
 #### 函数调用
 挂载在vue.prototype上，vue实例中，直接使用this.$loading({options})使用。
 
+```js
+import {Loading} from "rong-ui"
+
+or
+
+import Loading from "rong-ui/components/loading"
+
+Vue.use(Loading)
+```
+
 ```html
 
 var loading = this.$loading();

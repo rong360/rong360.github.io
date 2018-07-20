@@ -10,6 +10,10 @@
 ```js
 import {rInput} from "rong-ui"
 
+or
+
+import rInput from "rong-ui/components/rInput"
+
 Vue.use(rInput)
 ```
 ```html

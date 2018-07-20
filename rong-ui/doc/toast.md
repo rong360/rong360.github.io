@@ -9,7 +9,20 @@
 #### 函数调用
 挂载在vue.prototype上，vue实例中，直接使用this.$toast({options})使用。
 
-```html
+```js
+
+import {Toast} from "rong-ui"
+
+or
+
+import Toast from "rong-ui/components/toast"
+
+Vue.use(Toast)
+
+```
+
+```js
+
 this.$toast({
     propsData: {
         message: '芭芭拉小魔仙，变身!',
