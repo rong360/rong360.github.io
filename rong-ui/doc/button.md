@@ -4,19 +4,19 @@
 
 #### 组件引入
 
-```
+```js
 import {rButton} from "rong-ui"
-
+```
 or
-
+```js
 import rButton from "rong-ui/components/rButton"
 
 Vue.use(rButton)
-
+```
+```html
 <rButton type="warning" radius="on" fill="off" :btnStyle="btnStyle" @click="doClick">
 		圆角 空心 示警 自定义宽度
 </rButton>
-
 ```
 
 ### Props
