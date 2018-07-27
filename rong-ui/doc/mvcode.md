@@ -19,7 +19,7 @@
 
 
 
-#### 全局组件引入
+### 全局组件引入
 ``` 
   import rMvcode from 'rong-ui/components/rMvcode'
   Vue.use(rMvcode);
