@@ -41,10 +41,9 @@ attrs里新增{
 
 
 #### 示例代码：
-<div align=center><img width="150" height="150" src="https://rong360.github.io/rong-ui/assets/images/rMVcode.png"/></div>
+<div align=center><img width="300"  src="https://rong360.github.io/rong-ui/assets/images/rMVcode.png"/></div>
 
-#####
-```
+```bash
 <rMvcode 
   :attrs="config" 
   @oninput="oninput" 
