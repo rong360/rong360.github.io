@@ -74,3 +74,214 @@ Vue.use(rInput)
 
 input组件有个不具名slot,便于用户拓展，比如拓展成图片验证码组件
 
+
+
+
+#### 示例代码：
+<div align=center><img width="200"  src="https://rong360.github.io/rong-ui/assets/images/rInput.png"/></div>
+
+```bash
+<template v-for="item in items">
+  <component :is="item.type" :attrs="item.config" :ref="item.config.name" @onclickLabelIcon="onclickLabelIcon" @onclickInputIcon="onclickInputIcon" @oninput="oninput" ></component>
+</template>
+<div class="btn" @click="doSubmit">提交</div>
+
+<div class="tip">以下为输入框左对齐</div>
+<template v-for="item in items1">
+  <component :is="item.type" :attrs="item.config" :ref="item.config.name"></component>
+</template>
+
+export default{
+  name: "rInputExp",
+  data(){
+    return {
+      items: [
+        {
+          type: "rInput",
+          config: {
+            title: "爸爸的名字",
+            name: 'fatherName',
+            value: "",
+            placeholder: "请输入马云",
+            disabled: false,
+            readonly: false,
+            autofocus: false,
+            unit: '',
+            verify: function(value){
+              if(value != "马云"){
+                this.$toast("请输入马云爸爸的名字！");
+                return false;
+              }else{
+                return true;
+              }
+            }
+          }
+        },
+        {
+          type: "rInput",
+          config: {
+            title: "爸爸有多少钱",
+            name: 'fatherMoney',
+            value: "",
+            placeholder: "请输入十个亿",
+            disabled: false,
+            readonly: false,
+            autofocus: false,
+            unit: '',
+            inputIconType: 'info',
+            verify: function(value){
+              var reg = /^[0-9]*[1-9][0-9]*$/;
+
+              if(!reg.test(value)){
+                this.$toast("马云爸爸的钱填正整数！");
+                return false;
+              }else{
+                return true;
+              }
+            }
+          }
+        },
+        {
+          type: "rInput",
+          config: {
+            title: "爸爸儿子的名字",
+            name: 'sonName',
+            value: "",
+            placeholder: "请输入王思聪",
+            disabled: false,
+            readonly: false,
+            autofocus: false,
+            unit: '',
+            showLabelIcon: true,
+            labelIconType: 'addrlist'
+          }
+        },
+        {
+          type: "rInput",
+          config:  {
+            title: "爸爸儿子女友的数目",
+            name: 'girlfriend',
+            value: "",
+            placeholder: "随你所想 不超过三位数",
+            maxlength: 3,
+            disabled: false,
+            readonly: false,
+            autofocus: false,
+            unit: '个',
+            showInputIcon: false
+          }
+        },
+        {
+          type: "rInput",
+          config:  {
+            title: "想不想成为爸爸的儿子",
+            name: 'beSon',
+            value: "想(readonly)",
+            readonly: true,
+            placeholder: "一定要",
+            disabled: 'disabled',
+            autofocus: false,
+            unit: ''
+          }
+
+        }
+      ],
+      items1: [
+        {
+          type: "rInput",
+          config: {
+            title: "登录名",
+            name: 'uName',
+            value: "",
+            placeholder: "邮箱/手机号/昵称",
+            disabled: false,
+            readonly: false,
+            autofocus: false,
+            unit: '',
+            lr: "left",
+            lblWidth: "4em"
+          }
+        },
+        {
+          type: "rInput",
+          config: {
+            title: "登录密码",
+            name: 'uPwd',
+            value: "",
+            placeholder: "6-12位数字加字母",
+            disabled: false,
+            readonly: false,
+            autofocus: false,
+            unit: '',
+            inputIconType: 'info',
+            lr: 'left',
+            lblWidth: "4em"
+          }
+        }
+      ]
+    }
+  },
+  created(){
+    var self = this;
+    setTimeout(function(){
+      self.items[0].config.value = '老马';
+    }, 2000)
+  },
+  methods: {
+    doSubmit(){
+      let pass;
+      for(var key in this.$refs){
+        pass = this.$refs[key][0].verify();
+        if(!pass){
+          break;
+        }
+      }
+      if(pass) {
+        let s = [],
+          sa = {};
+        for(var key in this.$refs){
+          s.push(this.$refs[key][0].getSerialize());
+          Object.assign(sa,this.$refs[key][0].getSerializeArray());
+        }
+        this.$dialog({
+          propsData: {
+            message:"验证通过！ 序列化数据为："+s.join("&")
+          },
+          methods: {
+            onConfirm: function(){
+              this.remove();
+              alert("序列化数组："+JSON.stringify(sa));
+            }
+          }
+        });
+      }
+    },
+    onclickInputIcon(e, component){
+      this.$toast({
+        propsData: {
+          message: component.attrs.title
+        }
+      })
+    },
+    onclickLabelIcon(e, component){
+      this.$toast({
+        propsData: {
+          message: component.attrs.title
+        }
+      })
+    },
+    oninput(e, component){
+      if(component.conf.name == 'girlfriend' || component.conf.name == 'fatherMoney'){
+        var target = e.target,
+          value = target.value;
+        value = value.replace(/[０１２３４５６７８９]/g, function(v){
+          return v.charCodeAt(0)-65296;}
+        );
+          component.currentValue = value.replace(/[^\d]/g,'');
+      }
+    }
+  }
+
+}
+```
+
