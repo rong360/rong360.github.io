@@ -41,7 +41,7 @@ attrs里新增{
 
 
 #### 示例代码：
-![Mou icon](https://rong360.github.io/rong-ui/assets/images/rMVcode.png =300x)
+![Alt text](https://rong360.github.io/rong-ui/assets/images/rMVcode.png =300x)
 ```
 <rMvcode 
   :attrs="config" 
