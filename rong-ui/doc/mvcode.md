@@ -41,7 +41,7 @@ attrs里新增{
 
 
 #### 示例代码：
-<div align=center><img width="300"  src="https://rong360.github.io/rong-ui/assets/images/rMVcode.png"/></div>
+<div align=center><img width="200"  src="https://rong360.github.io/rong-ui/assets/images/rMVcode.png"/></div>
 
 ```bash
 <rMvcode 
