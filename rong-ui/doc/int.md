@@ -6,7 +6,7 @@
 
 
 
-#### 全局组件引入
+### 全局组件引入
 ``` bash
 安装：
   import rInt from 'rong-ui/components/rInt'
@@ -20,7 +20,9 @@
 
 
 #### 示例代码：
-```
+<div align=center><img width="200"  src="https://rong360.github.io/rong-ui/assets/images/rInt.png"/></div>
+
+```bash
 <rInt :attrs="config" :ref="config.name" @onclear="onclear"></rInt>
 <rInt :attrs="config0" :ref="config0.name" @onclickInputIcon="onclickInputIcon"></rInt>
 <rInt :attrs="config1" :ref="config1.name" @onclickLabelIcon="onclickLabelIcon"></rInt>
