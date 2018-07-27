@@ -43,7 +43,38 @@ var dialog = this.$dialog({
 });
 
 ```
+弹窗中插入组件，数据通过rContentData传递
+this.$dialog({
+    propsData: {
+        rContentData: {
+            user: 'jay',
+            vip: 1
+        }
+    },
+    components: {
+        rContent: resolve => resolve(require('./repaymentTip.vue'))
+    }
+})
+------ ./repaymentTip.vue ------
+<template>
+    <div>
+        hello {{rContentData.user}}
+    </div>
+</template>
 
+<script type="text/javascript">
+    export default {
+        name: 'repaymentTip',
+        props: {
+            rContentData: {
+                type: Object,
+                default: function(){
+                    return {}
+                }
+            }
+        }
+    }
+</script>
 ```html
 
 <rDialog :showCancelBtn="false" @onConfirm="onConfirm" @onCancel="onCancel">
