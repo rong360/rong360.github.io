@@ -6,7 +6,7 @@
 
 
 
-IDCard 身份证号码
+### 全局组件引入
 ``` bash
 安装：
   import rIDCard from 'rong-ui/components/rIDCard'
