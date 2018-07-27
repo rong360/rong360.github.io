@@ -41,7 +41,7 @@ attrs里新增{
 
 
 #### 示例代码：
-<img src="https://rong360.github.io/rong-ui/assets/images/rMVcode.png" width = "300"  div align=center/>
+<img src="https://rong360.github.io/rong-ui/assets/images/rMVcode.png" width = "300"  div align=center />
 ```
 <rMvcode 
   :attrs="config" 
