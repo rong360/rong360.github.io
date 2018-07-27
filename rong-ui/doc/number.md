@@ -100,3 +100,187 @@ data(){
 
 Number组件有个不具名slot,便于用户拓展，比如拓展成短信验证码组件
 
+
+
+
+
+
+
+
+#### 示例代码：
+<div align=center><img width="200"  src="https://rong360.github.io/rong-ui/assets/images/rNumber.png"/></div>
+
+```bash
+<rNumber :attrs="config" :ref="config.name" @onclear="onclear"></rNumber>
+<rNumber :attrs="config0" :ref="config0.name"></rNumber>
+<rNumber 
+  :attrs="config1" 
+  :ref="config1.name" 
+  @onconfirm="confrimFatherHand" 
+  @onclickLabelIcon="onclickLabelIcon" 
+  @onclickInputIcon="onclickInputIcon"
+>
+</rNumber>
+<rNumber 
+  :attrs="config2" 
+  :ref="config2.name"
+  @onclickLabelIcon="onclickLabelIcon" 
+>
+</rNumber>
+<rNumber :attrs="config3" :ref="config3.name"></rNumber>
+<div class="btn" @click="doSubmit">提交</div>
+
+export default{
+  name: "rNumberExp",
+  data(){
+    return {
+      config: {
+        title: "马云爸爸有多少钱(覆盖默认校验)",
+        name: 'fatherName',
+        value: "3000",
+        maxlength: 5,
+        placeholder: "请输入几个亿",
+        disabled: false,
+        readonly: false,
+        unit: '亿',
+        verify(val){
+          if(val < 10000){
+            this.$toast({
+              propsData: {
+                message: '你也太小看马玉爸爸了'
+              }
+            })
+            return false;
+          }else{
+            return true;
+          }
+        }
+      },
+      config0: {
+        title: "马云爸爸的年龄(maxlength=3)",
+        type: 'int',
+        name: 'fatherAge',
+        value: "",
+        placeholder: "请输入",
+        disabled: false,
+        readonly: false,
+        unit: '岁',
+        maxlength: 3
+      },
+      config1: {
+        title: "马云爸爸几个秘书(键盘确认会触发校验)",
+        type: 'int',
+        name: 'fatherHand',
+        value: "",
+        placeholder: "请输入",
+        disabled: false,
+        readonly: false,
+        unit: '',
+        showInputIcon: true,
+        inputIconType: 'info',
+        verify: function(val){
+          if(val===""){
+            this.$toast("爸爸的秘书个数-请输入数字！");
+            return false;
+          }else if(val>3){
+            this.$toast("爸爸的秘书个数-输入的数字须小于3！");
+            return false;
+          }
+          return true;
+          
+        }
+      },
+      config2: {
+        title: "马云爸爸几个老婆",
+        name: 'fatherWife',
+        value: "1",
+        placeholder: "请输入",
+        disabled: false,
+        readonly: true,
+        autofocus: false,
+        unit: '(readonly)个',
+        showLabelIcon: true,
+        labelIconType: 'info'
+      },
+      config3: {
+        title: "马云爸爸的身份证号(键盘类型idcard)",
+        type: 'idcard',
+        name: 'fatherID',
+        value: "",
+        placeholder: "请输入",
+        disabled: false,
+        readonly: false,
+        autofocus: false,
+        unit: ''
+      }
+    }     
+  },
+  created(){
+    var self = this;
+    setTimeout(function(){
+      self.config.value = 789;
+      self.config.placeholder = 'xxx';
+      //self.config.readonly = 'readonly';
+      self.config.lr = 'right';
+      self.config.type = 'int';
+      self.config.maxlength = 8;
+      self.config.canDelete = true;
+      //self.config.unit = '元';
+    }, 2000)
+  },
+  methods: {
+    doSubmit(){
+      let pass;
+      for(var key in this.$refs){
+        pass = this.$refs[key].verify();
+        if(!pass){
+          break;
+        }
+      }
+      if(pass){
+        let s = [],
+          sa = {};
+        for(var key in this.$refs){
+          s.push(this.$refs[key].getSerialize());
+          Object.assign(sa,this.$refs[key].getSerializeArray());
+        }
+        this.$dialog({
+          propsData: {
+            message:"验证通过！ 序列化数据为："+s.join("&")
+          },
+          methods: {
+            onConfirm: function(){
+              this.remove();
+              alert("序列化数组："+JSON.stringify(sa));
+            }
+          }
+        });
+      }
+    },
+    onclear(){
+      this.$toast({
+        propsData: {
+          message: '数据为空了，你可以把button置灰'
+        }
+      })
+    },
+    confrimFatherHand(){
+      this.$refs.fatherHand.verify();
+    },
+    onclickInputIcon(e, component){
+      this.$toast({
+        propsData: {
+          message: component.attrs.title + ' --- 提示信息'
+        }
+      })
+    },
+    onclickLabelIcon(e, component){
+      this.$toast({
+        propsData: {
+          message: component.attrs.title+ ' --- 提示信息'
+        }
+      })
+    }
+  }
+}
+```
