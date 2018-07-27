@@ -43,7 +43,9 @@ var dialog = this.$dialog({
 });
 
 ```
-弹窗中插入组件，数据通过rContentData传递
+
+####弹窗中插入组件，数据通过rContentData传递
+```
 this.$dialog({
     propsData: {
         rContentData: {
@@ -75,6 +77,8 @@ this.$dialog({
         }
     }
 </script>
+```
+
 ```html
 
 <rDialog :showCancelBtn="false" @onConfirm="onConfirm" @onCancel="onCancel">
