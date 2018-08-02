@@ -15,7 +15,7 @@
 |---------- |-------- |---------- |
 | success  | 验证码接口请求成功    | （result） result-接口返回值 |
 | fail  | 验证码接口请求失败    | （result） result-接口返回值 |
-
+| onclickSendBtn  | 点击发送验证码    | null |
 
 
 

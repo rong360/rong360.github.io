@@ -94,7 +94,10 @@ config: {
 | getSerialize | 获取当前组件表单数据，包含children数据 | | key=value |
 | getSerializeArray | 获取当前组件表单数据，包含children数据 | | {key: value} |
 
-
+### slot
+| slot名称      | 说明    | 
+|---------- |-------- |
+| label  | 表单label    | 
 
 
 
