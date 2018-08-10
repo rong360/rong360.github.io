@@ -72,6 +72,7 @@ data(){
 | disabled  | 数字输入框是否禁用   | boolean   |  | `false` |
 | readonly  | 数字输入框是否只读    | boolean   |  | `false` |
 | unit  | 输入项单位    | string   |  | `""` |
+| showBottomBorder  | 底部边框是否显示    | boolean   |  | `true` |
 | showInputIcon  | 输入框后的图标是否显示    | boolean   |  | `true` |
 | inputIconType  | 输入框后的图标类型    | string   | 见Icon组件值 | `close-circled` |
 | showLabelIcon  | 表单label后的图标是否显示    | boolean   |  | `false` |
