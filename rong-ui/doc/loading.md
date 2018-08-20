@@ -27,6 +27,26 @@ setTimeout(function(){
 
 ```
 
+```html
+var loading = this.$loading({
+	propsData: {
+		text: '3s',
+		textInside: true
+	}
+});
+
+var count = 3;
+
+var timer = setInterval(function(){
+	count--;
+	if(count == 0){
+		loading.remove();
+	}else{
+		loading.text = count + 's';
+	}
+}, 1000)
+```
+
 ### Attributes
 
 loading实例方法通过`子类组件`覆盖基类组件的的方式实现，因此传入的对象是组件相关的一些属性：propsData、methods、computed、mounted...
