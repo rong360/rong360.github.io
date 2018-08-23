@@ -48,7 +48,9 @@ Vue.use(rInput)
 | inputIconType  | 输入框后的图标类型    | string   | 见Icon组件值 | `close-circled` |
 | showLabelIcon  | 表单label后的图标是否显示    | boolean   |  | `false` |
 | labelIconType  | 表单label后的图标类型    | string   | 见Icon组件值 | `info` |
+| showLabel  | 表单label是否显示    | boolean   |  | `true` |
 | needVerify  | 提交时是否需要校验   | boolean   |  | `true` |
+| needVerifyToast  | 默认非空校验没通过时是否出toast提示   | boolean   |  | `true` |
 | verify  | 数字校验函数   | function   |  | `非空校验` |
 
 
