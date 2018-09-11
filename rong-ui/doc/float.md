@@ -1,4 +1,4 @@
-## Int 整数
+## float 浮点数
 
 ***由Number组件扩展，调起的带小数点的键盘，使用方法及属性见Number组件***
 
@@ -17,6 +17,13 @@
   Vue.use(rFloat);
 ```
 
+### Attributes
+
+### Float组件继承Number组件，参数同Number组件，attrs新增参数说明过如下：
+
+| 参数      | 说明    | 类型      | 可选值       | 默认值   |
+|---------- |-------- |---------- |-------------  |-------- |
+| fixed | 控制小数点后可输入的位数 | number |  |  -1|
 
 
 #### 示例代码：
@@ -61,7 +68,7 @@ export default{
         disabled: false,
         readonly: false,
         unit: '',
-        floatFixed: 3,
+        fixed: 3,
         showInputIcon: true,
         inputIconType: 'info',
         verify: function(val){
