@@ -1,5 +1,18 @@
 ## Keyboard 数字虚拟键盘
 
+
+
+#### 链接
+
+[点击链接查看示例](https://rong360.github.io/rong-ui/demo/index.html#/) 
+
+#### 扫描二维码体验
+
+![Alt text](https://static.rong360.com/upload/png/a2/70/a27057593a1271f2e877d382d6718fed.png)
+
+
+
+
 **包含了常用的 Keyboard 数字虚拟键盘**
 
 ### 基本用法

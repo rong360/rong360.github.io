@@ -1,5 +1,15 @@
 ## select 下拉列表
 
+
+#### 链接
+
+[点击链接查看示例](https://rong360.github.io/rong-ui/demo/index.html#/) 
+
+#### 扫描二维码体验
+
+![Alt text](https://static.rong360.com/upload/png/a2/70/a27057593a1271f2e877d382d6718fed.png)
+
+
 select使用了第三方better-picker模块来高仿IOS的UIPickerView组件，相关说明请[点击查看](https://github.com/ustbhuangyi/picker)
 
 ### 基本用法

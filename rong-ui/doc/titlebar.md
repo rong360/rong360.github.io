@@ -1,5 +1,15 @@
 ## Titlebar 标题
 
+#### 链接
+
+[点击链接查看示例](https://rong360.github.io/rong-ui/demo/index.html#/) 
+
+#### 扫描二维码体验
+
+![Alt text](https://static.rong360.com/upload/png/a2/70/a27057593a1271f2e877d382d6718fed.png)
+
+
+
     组件含有三个具名slot，slot=l是左侧内容区，slot=r是右侧内容区，slot=c是标题内容区
     默认slot=l里, 当传入backurl时，出现返回按钮，点击返回，触发事件onback
     默认slot=c里，显示标题

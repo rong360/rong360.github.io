@@ -1,8 +1,18 @@
 ## Email 邮箱
 
+#### 链接
+
+[点击链接查看示例](https://rong360.github.io/rong-ui/demo/index.html#/) 
+
+#### 扫描二维码体验
+
+![Alt text](https://static.rong360.com/upload/png/a2/70/a27057593a1271f2e877d382d6718fed.png)
+
+
 *** 组件参数继承rInput组件，attrs新增邮箱列表属性{emailList:[]},事件新增onset ***
 
 *** 已知bug: 滑动穿透，邮箱列表滑动时会会滚动body,解决方案都不太完美。目前只有抓取业务使用，目测不会出这个bug,搁置 ***
+
 
 ### 基本用法
 

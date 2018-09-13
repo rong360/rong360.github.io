@@ -1,5 +1,15 @@
 ## Number 数字
 
+#### 链接
+
+[点击链接查看示例](https://rong360.github.io/rong-ui/demo/index.html#/) 
+
+#### 扫描二维码体验
+
+![Alt text](https://static.rong360.com/upload/png/a2/70/a27057593a1271f2e877d382d6718fed.png)
+
+
+
 **包含了常用的数字类型，整数、浮点数、手机号码、身份证号码、图片验证码组件都是从该组件拓展出的组件**
 
 ### 基本用法

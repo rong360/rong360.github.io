@@ -1,5 +1,16 @@
 ## Vcode 图片验证码
 
+
+#### 链接
+
+[点击链接查看示例](https://rong360.github.io/rong-ui/demo/index.html#/) 
+
+#### 扫描二维码体验
+
+![Alt text](https://static.rong360.com/upload/png/a2/70/a27057593a1271f2e877d382d6718fed.png)
+
+
+
 ***由`Input`扩张，具体使用方法见`Input`组件***
 
 ### Attributes

@@ -1,8 +1,20 @@
 ## Datepicker 日期
 
+
+#### 链接
+
+[点击链接查看示例](https://rong360.github.io/rong-ui/demo/index.html#/) 
+
+#### 扫描二维码体验
+
+![Alt text](https://static.rong360.com/upload/png/a2/70/a27057593a1271f2e877d382d6718fed.png)
+
+
+
 Datepicker使用了第三方better-picker模块来高仿IOS的UIPickerView组件，相关说明请[点击查看](https://github.com/ustbhuangyi/picker)
 
 日期组件，如果需要作为表单组件，请自行扩展
+
 
 ### 基本用法
 

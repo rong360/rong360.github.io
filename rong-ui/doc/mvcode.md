@@ -1,5 +1,15 @@
 ## Mvcode 短信验证码
 
+#### 链接
+
+[点击链接查看示例](https://rong360.github.io/rong-ui/demo/index.html#/) 
+
+#### 扫描二维码体验
+
+![Alt text](https://static.rong360.com/upload/png/a2/70/a27057593a1271f2e877d382d6718fed.png)
+
+
+
 ***由Number组件扩展，调起的整数键盘，使用方法及属性见Number组件***
 
 ### attrs下新增参数
