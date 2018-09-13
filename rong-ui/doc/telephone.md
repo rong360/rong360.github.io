@@ -7,13 +7,16 @@
 
 
 ### 全局组件引入
-``` bash
-安装：
-  import rTelephone from 'rong-ui/components/rTelephone'
-  Vue.use(rTelephone);
-
-  或者：
+```js
+  import "rong-ui/components/rong-ui.css"
   import {rTelephone} from 'rong-ui'
+  Vue.use(rTelephone);
+```
+
+or
+
+```js
+  import rTelephone from 'rong-ui/components/rTelephone'
   Vue.use(rTelephone);
 ```
 

@@ -8,11 +8,13 @@
 
 ### 全局组件引入
 ``` bash
-安装：
+  import "rong-ui/components/rong-ui.css"
   import rInt from 'rong-ui/components/rInt'
   Vue.use(rInt);
+```
+ or
 
-  或者：
+```js
   import {rInt} from 'rong-ui'
   Vue.use(rInt);
 ```

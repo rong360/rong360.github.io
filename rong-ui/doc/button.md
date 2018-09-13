@@ -5,7 +5,9 @@
 #### 组件引入
 
 ```js
+import "rong-ui/components/rong-ui.css"
 import {rButton} from "rong-ui"
+Vue.use(rButton)
 ```
 or
 ```js

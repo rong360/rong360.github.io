@@ -9,11 +9,14 @@
 #### 组件引入
 
 ```js
-
+import "rong-ui/components/rong-ui.css"
 import {rTitlebar} from "rong-ui"
+Vue.use(rTitlebar)
+```
 
 or
 
+```js
 import rTitlebar from "rong-ui/components/rTitlebar"
 
 Vue.use(rTitlebar)

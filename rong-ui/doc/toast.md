@@ -10,11 +10,14 @@
 挂载在vue.prototype上，vue实例中，直接使用this.$toast({options})使用。
 
 ```js
-
+import "rong-ui/components/rong-ui.css"
 import {Toast} from "rong-ui"
+Vue.use(Toast)
+```
 
 or
 
+```js
 import Toast from "rong-ui/components/toast"
 
 Vue.use(Toast)

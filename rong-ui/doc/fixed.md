@@ -5,10 +5,14 @@
 #### 组件引入
 
 ```js
+import "rong-ui/components/rong-ui.css"
 import {rFixed} from "rong-ui"
+Vue.use(rFixed)
+```
 
 or
 
+```js
 import rFixed from "rong-ui/components/rFixed"
 
 Vue.use(rFixed)

@@ -8,11 +8,14 @@ select使用了第三方better-picker模块来高仿IOS的UIPickerView组件，�
 
 
 ```js
-
+import "rong-ui/components/rong-ui.css"
 import {rSelect} from "rong-ui"
+Vue.use(rSelect)
+```
 
 or
 
+```js
 import rSelect from "rong-ui/components/rSelect"
 
 Vue.use(rSelect)

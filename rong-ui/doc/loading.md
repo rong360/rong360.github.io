@@ -8,10 +8,14 @@
 挂载在vue.prototype上，vue实例中，直接使用this.$loading({options})使用。
 
 ```js
+import "rong-ui/components/rong-ui.css"
 import {Loading} from "rong-ui"
+Vue.use(Loading)
+```
 
 or
 
+```js
 import Loading from "rong-ui/components/loading"
 
 Vue.use(Loading)

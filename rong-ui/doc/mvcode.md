@@ -22,12 +22,16 @@
 
 
 ### 全局组件引入
-``` 
-  import rMvcode from 'rong-ui/components/rMvcode'
-  Vue.use(rMvcode);
-
-  或者：
+```js 
+  import "rong-ui/components/rong-ui.css"
   import {rMvcode} from 'rong-ui'
+  Vue.use(rMvcode);
+```
+
+or
+
+```js
+  import rMvcode from 'rong-ui/components/rMvcode'
   Vue.use(rMvcode);
 
 

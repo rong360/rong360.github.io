@@ -10,11 +10,14 @@
 挂载在vue.prototype上，vue实例中，直接使用this.$dialog({options})使用。
 
 ```js
-
+import "rong-ui/components/rong-ui.css"
 import {Dialog} from "rong-ui"
+Vue.use(Dialog)
+```
 
 or
 
+```js
 import Dialog from "rong-ui/components/dialog"
 
 Vue.use(Dialog)

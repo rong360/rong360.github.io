@@ -8,13 +8,16 @@
 
 ### 全局组件引入
 ``` bash
-安装：
+  import "rong-ui/components/rong-ui.css"
+  import {rIDCard} from 'rong-ui'
+  Vue.use(rIDCard);
+```
+
+or
+``` bash
   import rIDCard from 'rong-ui/components/rIDCard'
   Vue.use(rIDCard);
 
-  或者：
-  import {rIDCard} from 'rong-ui'
-  Vue.use(rIDCard);
 ```
 
 

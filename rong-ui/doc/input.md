@@ -8,10 +8,14 @@
 
 
 ```js
+import "rong-ui/components/rong-ui.css"
 import {rInput} from "rong-ui"
+Vue.use(rInput)
+```
 
 or
 
+```js
 import rInput from "rong-ui/components/rInput"
 
 Vue.use(rInput)

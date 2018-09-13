@@ -4,11 +4,15 @@
 
 #### 组件引入
 
-```
+``` js
+import "rong-ui/components/rong-ui.css"
 import {rIcon} from "rong-ui"
+Vue.use(rIcon)
+```
 
 or
 
+``` js
 import rIcon from "rong-ui/components/rIcon"
 
 Vue.use(rIcon)

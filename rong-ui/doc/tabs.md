@@ -4,12 +4,15 @@
 
 #### 组件引入
 
-```
-
+```js
+import "rong-ui/components/rong-ui.css"
 import {rTabs} from "rong-ui"
+Vue.use(rTabs)
+```
 
 or
 
+```js
 import rTabs from "rong-ui/components/rTabs"
 
 Vue.use(rTabs)

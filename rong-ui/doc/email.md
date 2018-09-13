@@ -10,10 +10,14 @@
 
 
 ```js
+import "rong-ui/components/rong-ui.css"
 import {rEmail} from "rong-ui"
+Vue.use(rEmail)
+```
 
 or
 
+```js
 import rEmail from "rong-ui/components/rEmail"
 
 Vue.use(rEmail)

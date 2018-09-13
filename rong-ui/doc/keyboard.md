@@ -8,10 +8,14 @@
 挂载在vue.prototype上，vue实例中，直接使用this.$keyborad({options})使用。
 
 ```js
+import "rong-ui/components/rong-ui.css"
 import {Keyboard} from "rong-ui"
+Vue.use(Keyboard)
+```
 
 or
 
+```js
 import Keyboard from "rong-ui/components/keyboard"
 
 Vue.use(Keyboard)

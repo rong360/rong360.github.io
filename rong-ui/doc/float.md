@@ -7,14 +7,17 @@
 
 
 ### 全局组件引入
-``` bash
-安装：
+``` js
+  import "rong-ui/components/rong-ui.css"
+  import {rFloat} from 'rong-ui'
+  Vue.use(rFloat);
+```
+
+  or
+``` js
   import rFloat from 'rong-ui/components/rFloat'
   Vue.use(rFloat);
 
-  或者：
-  import {rFloat} from 'rong-ui'
-  Vue.use(rFloat);
 ```
 
 ### Attributes

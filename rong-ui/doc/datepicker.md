@@ -10,13 +10,15 @@ Datepicker使用了第三方better-picker模块来高仿IOS的UIPickerView组件
 
 
 ```js
-
+import "rong-ui/components/rong-ui.css"
 import {rDatepicker} from "rong-ui"
+Vue.use(rDatepicker)
+```
 
 or
 
+```js
 import rDatepicker from "rong-ui/components/rDatepicker"
-
 
 Vue.use(rDatepicker)
 
