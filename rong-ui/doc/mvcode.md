@@ -27,7 +27,7 @@
 |---------- |-------- |---------- |
 | success  | 验证码接口请求成功    | （result） result-接口返回值 |
 | fail  | 验证码接口请求失败    | （result） result-接口返回值 |
-| onclickSendBtn  | 点击发送验证码    | null |
+| onclickSendBtn  | 点击发送验证码    | return false 时可阻止请求短信验证码接口(可在该函数内部做某些校验，校验通过时再发送请求)。函数内部this指向当前验证码组件。 |
 
 
 
