@@ -20,6 +20,8 @@
 | start  | 倒计时是否开始    | Boolean   |  | false |
 | action  | 发送短信验证码接口    | string   |  |  |
 | params  | 发送短信验证码需携带的参数，如手机号码    | object   |  | `{}` |
+| success  | 验证码接口请求成功时回调   | function(result)   |  |  |
+| fail  | 验证码接口请求失败时回调   | function(result)   |  |  |
 
 
 ### 新增events
