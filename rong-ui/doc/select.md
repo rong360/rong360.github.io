@@ -88,6 +88,7 @@ config: {
 | data  | 列表数据    | Array<{text:"展示文案"，value:"选项值"，children:[{列表下级组件配置信息}]}>   |  |  |
 | lr  | 数字输入框对齐方式    | string   | `left` `right` | `right` |
 | lblWidth | 输入左对齐时，label文案的宽度 | string | | eg. "3em"、"100px"|
+| showLabel  | 表单label是否显示    | boolean   |  | `true` |
 | placeholder  | 数字输入框提示文案    | string   | | `请输入` |
 | disabled  | 数字输入框是否禁用   | boolean   |  | `false` |
 | readonly  | 数字输入框是否只读    | boolean   |  | `false` |
