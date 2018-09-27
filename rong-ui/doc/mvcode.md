@@ -17,7 +17,8 @@
 | 参数      | 说明    | 类型      | 可选值       | 默认值   |
 |---------- |-------- |---------- |-------------  |-------- |
 | counter | 倒计时时长(单位：s) | number |  | `60` |
-| start  | 倒计时是否开始    | Boolean   |  | false |
+| start  | 组件加载完倒计时是否开始    | Boolean   |  | false |
+| offStartTimer  | 关闭倒计时， 可通过调用组件的startTimer方法手动启动倒计时, 如success(res){if(res.status==1){this.startTimer()}}    | Boolean   |  | false |
 | action  | 发送短信验证码接口    | string   |  |  |
 | params  | 发送短信验证码需携带的参数，如手机号码    | object   |  | `{}` |
 | success  | 验证码接口请求成功时回调   | function(result)   |  |  |
