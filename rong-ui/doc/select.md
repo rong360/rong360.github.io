@@ -92,6 +92,7 @@ config: {
 | placeholder  | 数字输入框提示文案    | string   | | `请输入` |
 | disabled  | 数字输入框是否禁用   | boolean   |  | `false` |
 | readonly  | 数字输入框是否只读    | boolean   |  | `false` |
+| showBottomBorder  | 底部边框是否显示    | boolean   |  | `true` |
 | needVerify  | 提交时是否需要校验   | boolean   |  | `true` |
 | verify  | 数字校验函数   | function   |  | `非空校验` |
 
