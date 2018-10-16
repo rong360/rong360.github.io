@@ -125,6 +125,7 @@ dialog实例方法通过`子类组件`覆盖基类组件的的方式实现，因
 | dlgStyleObj  | 弹框样式    | object   | — |  |
 | position  | 弹框位置    | object   | {x: '',y: ''} |  |
 | animate  | 是否开启动画，bounceIn、bounceOut    | boolean   | — | `false` |
+| canDrag  | 是否需要拖拽    | boolean   | — | `false` |
 | message  | 弹框内容（普通文本或简单html）    | string   | — | '' |
 | contentStyleObj  | 内容样式    | object   | — | {} |
 | rContent | 弹窗内容部分需要插入组件时，通过rContent传入需要插入的组件,例如：```html components: {rContent: require('xxx.vue')}``` | object | - | - |
