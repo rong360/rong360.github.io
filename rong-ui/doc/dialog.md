@@ -123,7 +123,7 @@ dialog实例方法通过`子类组件`覆盖基类组件的的方式实现，因
 | showCloseBtn  | 是否显示关闭按钮    | boolean   | — | `false` |
 | CliperStyleObj  | 遮罩样式    | object   | — |  |
 | dlgStyleObj  | 弹框样式    | object   | — |  |
-| position  | 弹框位置    | object   | {x: '',y: ''} | x:`left` `center` `right` x:`top` `center` `bottom` |
+| position  | 弹框位置    | object   | {x: 'left/center/right',y: 'top/center/bottom'} | {x: 'center', y: 'center'} |
 | animate  | 是否开启动画，bounceIn、bounceOut    | boolean   | — | `false` |
 | canDrag  | 是否需要拖拽    | boolean   | — | `false` |
 | message  | 弹框内容（普通文本或简单html）    | string   | — | '' |
@@ -145,3 +145,42 @@ dialog实例方法通过`子类组件`覆盖基类组件的的方式实现，因
 | slot名称      | 说明    | 
 |---------- |-------- |
 | content  | 弹框内容    | 
+
+
+####弹框显示在底部示例
+```
+this.$dialog({
+    propsData: {
+        dlgStyleObj: {width: '100%', borderRadius:0},
+        position: {x: 'left', y: 'bottom'},
+        animate: true,
+        rContentData: {
+            user: 'jay',
+            vip: 1
+        }
+    },
+    components: {
+        rContent: resolve => resolve(require('./repaymentTip.vue'))
+    }
+})
+------ ./repaymentTip.vue ------
+<template>
+    <div>
+        hello {{rContentData.user}}
+    </div>
+</template>
+
+<script type="text/javascript">
+    export default {
+        name: 'repaymentTip',
+        props: {
+            rContentData: {
+                type: Object,
+                default: function(){
+                    return {}
+                }
+            }
+        }
+    }
+</script>
+```
