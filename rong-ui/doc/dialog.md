@@ -123,7 +123,7 @@ dialog实例方法通过`子类组件`覆盖基类组件的的方式实现，因
 | showCloseBtn  | 是否显示关闭按钮    | boolean   | — | `false` |
 | CliperStyleObj  | 遮罩样式    | object   | — |  |
 | dlgStyleObj  | 弹框样式    | object   | — |  |
-| position  | 弹框位置    | object   | {x: '',y: ''} |  |
+| position  | 弹框位置    | object   | {x: '',y: ''} | x:`left` `center` `right` x:`top` `center` `bottom` |
 | animate  | 是否开启动画，bounceIn、bounceOut    | boolean   | — | `false` |
 | canDrag  | 是否需要拖拽    | boolean   | — | `false` |
 | message  | 弹框内容（普通文本或简单html）    | string   | — | '' |
