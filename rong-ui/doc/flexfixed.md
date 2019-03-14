@@ -1,4 +1,4 @@
-## Fixed 吸顶或吸底(fixed布局)
+## rFlexFixed 吸顶或吸底(flex布局)
 
 #### 链接
 
@@ -15,21 +15,21 @@
 
 ```js
 import "rong-ui/components/rong-ui.css"
-import {rFixed} from "rong-ui"
-Vue.use(rFixed)
+import {rFlexFixed} from "rong-ui"
+Vue.use(rFlexFixed)
 ```
 
 or
 
 ```js
-import rFixed from "rong-ui/components/rFixed"
+import rFlexFixed from "rong-ui/components/rFlexFixed"
 
-Vue.use(rFixed)
+Vue.use(rFlexFixed)
 ```
 
 ```html
 <template>
-  <rFixed>
+  <rFlexFixed>
     <rTitlebar slot="header"></rTitlebar> 
     <p>content 1</p>
     <p>content </p>
@@ -53,16 +53,9 @@ Vue.use(rFixed)
     <p>content 7</p>
     <p></p>
     <rButton slot="footer">下一步</rButton>
-  </rFixed>
+  </rFlexFixed>
 </template>
 ```
-
-### Props
-
-| 参数      | 说明    | 类型      | 可选值       | 默认值   |
-|---------- |-------- |---------- |-------------  |-------- |
-| paddingTop  | 内容区域距顶部距离   | string   |   | `2.4rem` |
-| paddingBottom  | 内容区域距底部距离   | string   |   | `2.4rem` |
 
 
 ### slot

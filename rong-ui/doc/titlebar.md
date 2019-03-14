@@ -47,7 +47,7 @@ Vue.use(rTitlebar)
 |---------- |-------- |---------- |-------------  |-------- |
 | title  | 标题文案   | string   |   | |
 | theme  | 标题栏背景主题    | string   | `a` `b` `c` `d` `e` | `a` |
-| backurl  | 返回按钮点击后要跳转的url    | string   |  |   `""`  |
+| showBackto  | 是否显示返回按钮    | Boolean   |  |   `true`  |
 | tbStyle  | 标题栏自定义样式    | object   | | `{}` |
 
 
