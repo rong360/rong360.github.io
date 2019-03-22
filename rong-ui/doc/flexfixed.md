@@ -29,7 +29,7 @@ Vue.use(rFlexFixed)
 
 ```html
 <template>
-  <rFlexFixed>
+  <rFlexFixed @scroll="scroll">
     <rTitlebar slot="header"></rTitlebar> 
     <p>content 1</p>
     <p>content </p>
@@ -57,6 +57,17 @@ Vue.use(rFlexFixed)
 </template>
 ```
 
+```js
+  methods: {
+    scroll (scrollTop, maxScrollHeight) {
+      if( (maxScrollHeight-scrollTop) < 10 ){
+          console.log('滚动底啦~')
+      }
+    }
+  }
+
+```
+
 
 ### slot
 | slot名称      | 说明    | 
@@ -64,3 +75,10 @@ Vue.use(rFlexFixed)
 | 不具名slot  | 滚动区域   | 
 | header  | 头部   | 
 | footer  | 底部   | 
+
+### Events
+
+| 事件名称      | 说明    | 回调参数      |
+|---------- |-------- |---------- |
+| scroll  | 滚动事件    | (scrollTop, maxScrollHeight）， scrollTop：当前滚动高度，maxScrollHeight：最大滚动高度 |
+
