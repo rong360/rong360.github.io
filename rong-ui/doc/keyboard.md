@@ -67,6 +67,7 @@ keyboard实例方法通过`子类组件`覆盖基类组件的的方式实现，�
 | value  | 键盘初始值    | string   |  | `''` |
 | maxlength  | 键盘输入最大位数    | number   | — |  |
 | fixed  | 浮点数小数位位数    | number   |  |  |
+| showKeyboardTitle  | 键盘上title是否显示   | boolean   |  | `true` |
 
 ### mothods下提供的Events
 

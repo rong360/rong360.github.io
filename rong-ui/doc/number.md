@@ -94,6 +94,7 @@ data(){
 | needVerify  | 提交时是否需要校验   | boolean   |  | `true` |
 | needVerifyToast  | 默认非空校验没通过时是否出toast提示   | boolean   |  | `true` |
 | verify  | 数字校验函数   | function   |  | `非空校验` |
+| showKeyboardTitle  | 键盘上title是否显示   | boolean   |  | `true` |
 
 
 ### Events
