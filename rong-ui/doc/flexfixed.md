@@ -76,9 +76,16 @@ Vue.use(rFlexFixed)
 | header  | 头部   | 
 | footer  | 底部   | 
 
+
 ### Events
 
 | 事件名称      | 说明    | 回调参数      |
 |---------- |-------- |---------- |
 | scroll  | 滚动事件    | (scrollTop, maxScrollHeight）， scrollTop：当前滚动高度，maxScrollHeight：最大滚动高度 |
+
+
+### 嵌套overflow-x:scroll 或 overflow-y:scroll滚动元素
+```html
+在滚动元素上添加rFlexFixed-scroll样式，如<div class="rFlexFixed-scroll"></div>
+```
 
