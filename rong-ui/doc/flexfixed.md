@@ -86,6 +86,6 @@ Vue.use(rFlexFixed)
 
 ### 嵌套overflow-x:scroll 或 overflow-y:scroll滚动元素
 ```html
-在滚动元素上添加rFlexFixed-scroll样式，如<div class="rFlexFixed-scroll"></div>
+在滚动元素上添加rFlexFixed-scroll样式，如<div style="overflow-x:scroll" class="rFlexFixed-scroll"></div>
 ```
 
