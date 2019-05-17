@@ -49,6 +49,7 @@ Vue.use(rInput)
 | title | 表单label | string |  |  |
 | name  | 表单name    | string   |  |  |
 | value | 默认值 | string | | |
+| inputType | input类型 | string | | `text`|
 | lr  | 输入框对齐方式    | string   | `left` `right` | `right` |
 | lblWidth | 输入左对齐时，label文案的宽度 | string | | eg. "3em"、"100px"|
 | placeholder  | 输入框提示文案    | string   | | `请输入` |
