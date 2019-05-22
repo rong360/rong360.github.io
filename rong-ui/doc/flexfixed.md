@@ -59,7 +59,7 @@ Vue.use(rFlexFixed)
 
 ```js
   methods: {
-    scroll (scrollTop, maxScrollHeight) {
+    scroll (scrollTop, maxScrollHeight, direction) {
       if( (maxScrollHeight-scrollTop) < 10 ){
           console.log('滚动底啦~')
       }
