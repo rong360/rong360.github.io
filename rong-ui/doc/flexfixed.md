@@ -84,8 +84,12 @@ Vue.use(rFlexFixed)
 | scroll  | 滚动事件    | (scrollTop, maxScrollHeight, direction）， scrollTop：当前滚动高度，maxScrollHeight：最大滚动高度 , direction:纵向滚动方向 up or down|
 
 
-### 嵌套overflow-x:scroll 或 overflow-y:scroll滚动元素
+### 特别提示：嵌套overflow-x:scroll 或 overflow-y:scroll滚动元素时需在滚动元素上添加rFlexFixed-scroll样式
 ```html
-在滚动元素上添加rFlexFixed-scroll样式，如<div style="overflow-x:scroll" class="rFlexFixed-scroll"></div>
+如<div style="overflow-x:scroll" class="rFlexFixed-scroll"></div>
 ```
+
+
+
+
 
