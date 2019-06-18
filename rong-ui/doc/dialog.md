@@ -148,7 +148,12 @@ dialog实例方法通过`子类组件`覆盖基类组件的的方式实现，因
 | content  | 弹框内容    | 
 
 ### 特别提示
-弹框里插入滚动区域时，需在滚动区域上添加"scroll-area"样式，如<div class="scroll-area"></div>
+弹框里插入滚动区域时，需在滚动区域上添加"scroll-area"样式，如:
+```html
+<div class="scroll-area"></div>
+```
+
+
 
 ####弹框显示在底部示例
 ```
