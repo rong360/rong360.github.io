@@ -114,6 +114,7 @@ dialog实例方法通过`子类组件`覆盖基类组件的的方式实现，因
 | titleStyleObj  | 标题样式    | Object   | — | {} |
 | showIcon  | 是否显示icon    | object   | — | `false` |
 | icon  | 弹框icon    | string   | `changgui` `shuxie` `beiju` `icon_url` | `changgui` |
+| iconStyleObj  | icon样式    | object   | — | {} |
 | showCancelBtn  | 是否显示取消按钮   | boolean   | — | `true` |
 | cancelBtnText  | 取消按钮文案    | string   | — | `取消` |
 | cancelBtnStyleObj  | 取消按钮样式    | object   | — | `false` |
@@ -146,6 +147,8 @@ dialog实例方法通过`子类组件`覆盖基类组件的的方式实现，因
 |---------- |-------- |
 | content  | 弹框内容    | 
 
+### 特别提示
+弹框里插入滚动区域时，需在滚动区域上添加"scroll-area"样式，如<div class="scroll-area"></div>
 
 ####弹框显示在底部示例
 ```
