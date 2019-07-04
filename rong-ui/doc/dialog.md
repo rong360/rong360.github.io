@@ -131,6 +131,7 @@ dialog实例方法通过`子类组件`覆盖基类组件的的方式实现，因
 | contentStyleObj  | 内容样式    | object   | — | {} |
 | rContent | 弹窗内容部分需要插入组件时，通过rContent传入需要插入的组件,例如：```html components: {rContent: require('xxx.vue')}``` | object | - | - |
 | rContentData | 弹窗内容部分为rContent组件时，rContentData为组件所需数据，例如：propsData: { rContentData: { message: "hello" }} | object | - | - |
+| removeDialogOnHashChange | hash变化时是否移除dialog | boolean | — | `true` |
 
 
 ### Events
