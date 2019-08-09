@@ -75,3 +75,14 @@ keyboard实例方法通过`子类组件`覆盖基类组件的的方式实现，�
 |---------- |-------- |---------- |
 | typing  | 键盘点击事件    | （code,codeStr） code-键盘点击值，codeStr-当前值 |
 
+
+### 关于键盘遮挡
+如果输入框靠近页面底部，可能会出现键盘遮挡输入框的情况
+可在页面生命周期钩子函数中通过window.pageScrollEle指定页面滚动元素解决键盘遮挡问题，如：
+```js
+mounted(){
+    window.pageScrollEle = document.querySelector('#xxx')
+    或者
+    window.pageScrollEle = this.$refs.xxx
+}
+```

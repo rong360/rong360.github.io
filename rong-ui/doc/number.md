@@ -303,3 +303,15 @@ export default{
   }
 }
 ```
+
+
+### 关于键盘遮挡
+如果输入框靠近页面底部，可能会出现键盘遮挡输入框的情况
+可在页面生命周期钩子函数中通过window.pageScrollEle指定页面滚动元素解决键盘遮挡问题，如：
+```js
+mounted(){
+    window.pageScrollEle = document.querySelector('#xxx')
+    或者
+    window.pageScrollEle = this.$refs.xxx
+}
+```
