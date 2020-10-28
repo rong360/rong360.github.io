@@ -102,8 +102,7 @@ this.$dialog({
 </script>
 ```
 
-
-####template模板中插入Dialog
+#### template模板中插入Dialog
 ```html
 在template模板中使用时，可借助portal-vue插件，把Dialog显示在文档的任意位置
 // https://www.npmjs.com/package/portal-vue
@@ -139,27 +138,21 @@ dialog实例方法通过`子类组件`覆盖基类组件的的方式实现，因
 | showTitle  | 是否显示标题    | boolean   | `true` `false`  | `false` |
 | title  | 标题内容    | string   |  | `''` |
 | titleStyleObj  | 标题样式    | Object   | — | {} |
-
 | showCloseBtn  | 是否显示关闭按钮    | boolean   | — | `false` |
 | closeStyleObj  | 标题样式    | Object   | — | {} |
-
 | message  | 弹框内容（普通文本或简单html）    | string   | — | '' |
 | contentStyleObj  | 内容样式    | object   | — | {} |
 | rContent | 弹窗内容部分需要插入组件时，通过rContent传入需要插入的组件,例如：```html components: {rContent: require('xxx.vue')}``` | object | - | - |
 | rContentData | 弹窗内容部分为rContent组件时，rContentData为组件所需数据，例如：propsData: { rContentData: { message: "hello" }} | object | - | - |
-
 | showCancelBtn  | 是否显示取消按钮   | boolean   | — | `true` |
 | cancelBtnText  | 取消按钮文案    | string   | — | `取消` |
 | cancelBtnStyleObj  | 取消按钮样式    | object   | — | `false` |
-
 | showConfirmBtn  | 是否显示确认按钮    | boolean   | — | `true` |
 | confirmBtnText  | 确认按钮文案    | string   | — | `确认` |
 | confirmBtnStyleObj  | 确认按钮样式    | object   | — | {} |
-
 | CliperStyleObj  | 遮罩样式    | object   | — |  |
 | dlgStyleObj  | 弹框样式    | object   | — |  |
 | position  | 弹框位置    | object   | {x: 'left/center/right',y: 'top/center/bottom'} | {x: 'center', y: 'center'} |
-
 | removeDialogOnHashChange | hash变化时是否移除dialog | boolean | — | `false` |
 
 
