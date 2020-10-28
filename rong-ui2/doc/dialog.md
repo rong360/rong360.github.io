@@ -17,8 +17,7 @@
 
 ### 基本用法
 
-#### 函数调用
-挂载在vue.prototype上，vue实例中，直接使用this.$dialog({options})使用。
+#### 组件引入
 
 ```js
 npm install babel-plugin-import --save-dev
@@ -41,8 +40,10 @@ import RongUi2 from 'rong-ui2';
 import 'rong-ui2/dist/styles/rong-ui.css'
 Vue.use(RongUi2)
 ```
-```
 
+
+#### 函数调用
+挂载在vue.prototype上，vue实例中，直接使用this.$dialog({options})使用。
 ```js
 
 var dialog = this.$dialog({
@@ -101,6 +102,8 @@ this.$dialog({
 </script>
 ```
 
+
+####template模板中插入Dialog
 ```html
 在template模板中使用时，可借助portal-vue插件，把Dialog显示在文档的任意位置
 // https://www.npmjs.com/package/portal-vue
@@ -129,48 +132,50 @@ this.$dialog({
 
 dialog实例方法通过`子类组件`覆盖基类组件的的方式实现，因此传入的对象是组件相关的一些属性：propsData、methods、computed、mounted...
 
-#### propsData属性传入的数据大致分以下几部分：`弹窗标题`、`弹窗Icon`、`弹窗内容`、`弹窗按钮`
+#### propsData属性传入的数据大致分以下几部分：`弹窗标题`、`右上角close按钮`、`弹窗内容`、`弹窗cancel按钮`、`弹窗confirm按钮`
 
 | 参数      | 说明    | 类型      | 可选值       | 默认值   |
 |---------- |-------- |---------- |-------------  |-------- |
 | showTitle  | 是否显示标题    | boolean   | `true` `false`  | `false` |
 | title  | 标题内容    | string   |  | `''` |
 | titleStyleObj  | 标题样式    | Object   | — | {} |
-| showIcon  | 是否显示icon    | object   | — | `false` |
-| icon  | 弹框icon    | string   | `changgui` `shuxie` `beiju` `icon_url` | `changgui` |
-| iconStyleObj  | icon样式    | object   | — | {} |
-| showCancelBtn  | 是否显示取消按钮   | boolean   | — | `true` |
-| cancelBtnText  | 取消按钮文案    | string   | — | `取消` |
-| cancelBtnStyleObj  | 取消按钮样式    | object   | — | `false` |
-| showConfirmBtn  | 是否显示确认按钮    | boolean   | — | `true` |
-| confirmBtnText  | 确认按钮文案    | string   | — | `确认` |
-| confirmBtnStyleObj  | 确认按钮样式    | object   | — | {} |
+
 | showCloseBtn  | 是否显示关闭按钮    | boolean   | — | `false` |
-| CliperStyleObj  | 遮罩样式    | object   | — |  |
-| dlgStyleObj  | 弹框样式    | object   | — |  |
-| position  | 弹框位置    | object   | {x: 'left/center/right',y: 'top/center/bottom'} | {x: 'center', y: 'center'} |
-| animate  | 是否开启动画，bounceIn、bounceOut    | boolean   | — | `false` |
-| canDrag  | 是否需要拖拽    | boolean   | — | `false` |
+| closeStyleObj  | 标题样式    | Object   | — | {} |
+
 | message  | 弹框内容（普通文本或简单html）    | string   | — | '' |
 | contentStyleObj  | 内容样式    | object   | — | {} |
 | rContent | 弹窗内容部分需要插入组件时，通过rContent传入需要插入的组件,例如：```html components: {rContent: require('xxx.vue')}``` | object | - | - |
 | rContentData | 弹窗内容部分为rContent组件时，rContentData为组件所需数据，例如：propsData: { rContentData: { message: "hello" }} | object | - | - |
-| removeDialogOnHashChange | hash变化时是否移除dialog | boolean | — | `true` |
+
+| showCancelBtn  | 是否显示取消按钮   | boolean   | — | `true` |
+| cancelBtnText  | 取消按钮文案    | string   | — | `取消` |
+| cancelBtnStyleObj  | 取消按钮样式    | object   | — | `false` |
+
+| showConfirmBtn  | 是否显示确认按钮    | boolean   | — | `true` |
+| confirmBtnText  | 确认按钮文案    | string   | — | `确认` |
+| confirmBtnStyleObj  | 确认按钮样式    | object   | — | {} |
+
+| CliperStyleObj  | 遮罩样式    | object   | — |  |
+| dlgStyleObj  | 弹框样式    | object   | — |  |
+| position  | 弹框位置    | object   | {x: 'left/center/right',y: 'top/center/bottom'} | {x: 'center', y: 'center'} |
+
+| removeDialogOnHashChange | hash变化时是否移除dialog | boolean | — | `false` |
 
 
 ### Events
 
 | 事件名称      | 说明    | 回调参数      |
 |---------- |-------- |---------- |
-| onCancel  | 取消操作    | — |
-| onConfirm  | 确认操作    | — |
-| onClose  | 关闭点击操作    | — |
+| on-cancel  | 取消操作    | — |
+| on-confirm  | 确认操作    | — |
+| on-close  | 关闭点击操作    | — |
 
 
 ### slot
 | slot名称      | 说明    | 
 |---------- |-------- |
-| content  | 弹框内容    | 
+| 无  | 弹框内容    | 
 
 ### 特别提示
 弹框里插入滚动区域时，需在滚动区域上添加"scroll-area"样式，如:
