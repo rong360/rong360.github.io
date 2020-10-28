@@ -37,8 +37,8 @@ Vue.use(RongUi2)
 
 ```html
 <template>
-  <rFlexFixed @scroll="scroll">
-    <rTitlebar slot="header"></rTitlebar> 
+  <FlexFixed @on-scroll="scroll" @on-scroll-debounce="scrollDebounce">
+    <Titlebar slot="header"></Titlebar> 
     <p>content 1</p>
     <p>content </p>
     <p>content </p>
@@ -60,15 +60,20 @@ Vue.use(RongUi2)
     <p>content </p>
     <p>content 7</p>
     <p></p>
-    <rButton slot="footer">下一步</rButton>
-  </rFlexFixed>
+    <Button slot="footer">下一步</Button>
+  </FlexFixed>
 </template>
 ```
 
 ```js
   methods: {
-    scroll (scrollTop, maxScrollHeight, direction) {
-      if( (maxScrollHeight-scrollTop) < 10 ){
+    scroll ({scrollTop, maxScrollTop, direction}) {
+      if( (maxScrollTop-scrollTop) < 10 ){
+          console.log('滚动底啦~')
+      }
+    },
+    scrollDebounce ({scrollTop, maxScrollTop, direction}) {
+      if( (maxScrollTop-scrollTop) < 10 ){
           console.log('滚动底啦~')
       }
     }
@@ -89,12 +94,13 @@ Vue.use(RongUi2)
 
 | 事件名称      | 说明    | 回调参数      |
 |---------- |-------- |---------- |
-| scroll  | 滚动事件    | (scrollTop, maxScrollHeight, direction）， scrollTop：当前滚动高度，maxScrollHeight：最大滚动高度 , direction:纵向滚动方向 up or down|
+| on-scroll  | 滚动事件    | ({scrollTop, maxScrollTop, direction}）|
+| on-scroll-debounce  | 滚动事件    | ({scrollTop, maxScrollTop, direction}）|
 
 
-### 特别提示：嵌套overflow-x:scroll 或 overflow-y:scroll滚动元素时需在滚动元素上添加rFlexFixed-scroll样式
+### 特别提示：嵌套overflow-x:scroll 或 overflow-y:scroll滚动元素时需在滚动元素上添加scroll-area样式
 ```html
-如<div style="overflow-x:scroll" class="rFlexFixed-scroll"></div>
+如<div style="overflow-x:scroll" class="scroll-area"></div>
 ```
 
 
