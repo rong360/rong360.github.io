@@ -64,13 +64,13 @@ Vue.use(RongUi2)
 
 ### methods
 | 名称      | 说明    | 回调参数      |
-|---------- |-------- |---------- |---------- |
+|---------- |-------- |---------- |
 | validate | 校验所有表单项 | （result, message） |
 | validateOneByOne | 逐项校验表单项 |（result, message）|
 | getValue | 获取当前组件表单数据 | {name: name, value: value} |
 | getSerializeValue | 获取当前组件表单数据 |a=0&b=1 |
-| getObjectValue | 获取当前组件表单数据 | | {a: 0, b: 1} |
-| resetFields | 重置表单 | |
+| getObjectValue | 获取当前组件表单数据 | {a: 0, b: 1} |
+| resetFields | 重置表单 |- |
 
 ### slot
 | slot名称      | 说明    | 
