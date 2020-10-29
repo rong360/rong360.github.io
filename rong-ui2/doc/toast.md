@@ -1,4 +1,4 @@
-## Button 按钮
+## Toast 提示
 
 
 #### 链接
@@ -26,8 +26,8 @@ npm install babel-plugin-import --save-dev
 }
 
 然后这样按需引入组件，就可以减小体积了：
-import {Button} from 'rong-ui2';
-Vue.use(Button)
+import {Toast} from 'rong-ui2';
+Vue.use(Toast)
 ```
 or
 ```js
@@ -38,30 +38,41 @@ Vue.use(RongUi2)
 如果提示“rongUI2 is not defined”报错信息，请确保.babelrc文件中不能有上面按需引入的配置
 ```
 
-```html
-<Button type="warning" :radius="true" :fill="false" :btnStyle="btnStyle" @on-click="doClick">
-		圆角 空心 示警 自定义宽度
-</Button>
+```js
+
+this.$toast({
+    propsData: {
+        message: '芭芭拉小魔仙，变身!',
+        type: 'positive',
+        time: 5000
+    },
+    methods: {
+        callback(){
+            self.count++;
+        }
+    }
+});
+
+this.$toast("芭芭拉小魔仙，变身");
+
 ```
 
-### Props
+### Attributes
+
+toast实例方法通过`子类组件`覆盖基类组件的的方式实现，因此传入的对象是组件相关的一些属性：propsData、methods、computed、mounted...
+
+#### propsData属性传入的数据如下：
 
 | 参数      | 说明    | 类型      | 可选值       | 默认值   |
 |---------- |-------- |---------- |-------------  |-------- |
-| type  | 按钮类型   | string   | `default` `warning` `disabled`  | `default` |
-| radius  | 按钮是否有圆角    | boolean   | `true` `false` | `false` |
-| fill  | 背景是否填充    | boolean   | `true` `false` | `true` |
-| btnStyle  | 自定义样式    | object   | | `{}` |
+| wrapStyleObj | 样式 | object | - | `{top: '35%'}` |
+| message  | 提示内容    | string   | -  | "" |
+| type  | icon类型    | string   | `positive` `negetive` `long` | `long` |
+| time  | 多少ms后toast消失    | number   | — | `2000` |
 
-
-### Events
+### Events (methods属性下)
 
 | 事件名称      | 说明    | 回调参数      |
 |---------- |-------- |---------- |
-| on-click  | 点击button回调函数  |  event |
+| callback  | toast消失时回调函数    | — |
 
-
-### slot
-| slot名称      | 说明    | 
-|---------- |-------- |
-| 不具名slot  | button内容    | 

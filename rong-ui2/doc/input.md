@@ -9,8 +9,6 @@
 ![Alt text](https://static.rong360.com/upload/png/52/2b/522b2db3748056c80e21fda4921c8123.png)
 
 
-**输入框组件，可以进行扩展变成更丰富的输入组件，如图片验证码**
-
 ### 基本用法
 
 #### 组件引入
@@ -35,6 +33,8 @@ or
 import RongUi2 from 'rong-ui2';
 import 'rong-ui2/dist/styles/rong-ui.css'
 Vue.use(RongUi2)
+
+如果提示“rongUI2 is not defined”报错信息，请确保.babelrc文件中不能有上面按需引入的配置
 ```
 
 ```html
@@ -46,7 +46,7 @@ Vue.use(RongUi2)
 |---------- |-------- |---------- |-------------  |-------------  |
 | attrs | 表单配置项 | object | - | {}|
 | placeholder | 占位文本 | string | - | - |
-| label-width | lebel标签宽度 | string | - |-|
+| label-width | lebel标签宽度 | string | 如 `150px` `10rem`等 |-|
 | label-position | label标签对齐方式 | string | `left` `right` `top`  | `left` |
 | text-position | input文字对齐方式 | string | `left` `center` `right`  | `left` |
 | input-clear-style | 清空按钮样式 | object | - | {} |
@@ -70,6 +70,8 @@ Vue.use(RongUi2)
 | rules  | 类iview风格的校验规则    | array   |  | `[{required: true, message:'xxx不能为空', trigger:'blur'}]` |
 
 	特别说明，rules校验规则文档详见https://www.npmjs.com/package/async-validator
+
+	
 ### Events
 
 | 事件名称      | 说明    | 回调参数      |

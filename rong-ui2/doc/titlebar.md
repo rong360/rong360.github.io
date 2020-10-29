@@ -1,5 +1,4 @@
-## Button 按钮
-
+## Titlebar 标题
 
 #### 链接
 
@@ -26,8 +25,8 @@ npm install babel-plugin-import --save-dev
 }
 
 然后这样按需引入组件，就可以减小体积了：
-import {Button} from 'rong-ui2';
-Vue.use(Button)
+import {Titlebar} from 'rong-ui2';
+Vue.use(Titlebar)
 ```
 or
 ```js
@@ -39,29 +38,34 @@ Vue.use(RongUi2)
 ```
 
 ```html
-<Button type="warning" :radius="true" :fill="false" :btnStyle="btnStyle" @on-click="doClick">
-		圆角 空心 示警 自定义宽度
-</Button>
+
+<Titlebar theme="d" title="主题d">
+    <div slot="l" @click="goHome">首页</div>
+    <div slot="r" @click="goCenter">账户</div>
+</Titlebar>
+
 ```
 
 ### Props
 
 | 参数      | 说明    | 类型      | 可选值       | 默认值   |
 |---------- |-------- |---------- |-------------  |-------- |
-| type  | 按钮类型   | string   | `default` `warning` `disabled`  | `default` |
-| radius  | 按钮是否有圆角    | boolean   | `true` `false` | `false` |
-| fill  | 背景是否填充    | boolean   | `true` `false` | `true` |
-| btnStyle  | 自定义样式    | object   | | `{}` |
+| title  | 标题文案   | string   |   | |
+| theme  | 标题栏背景主题    | string   | `a` `b` `c` `d` `e` `f` | `a` |
+| showBackto  | 是否显示返回按钮    | Boolean   |  |   `true`  |
+| backArrowStyle  | 箭头自定义样式    | object   | | `{}` |
 
 
 ### Events
 
 | 事件名称      | 说明    | 回调参数      |
 |---------- |-------- |---------- |
-| on-click  | 点击button回调函数  |  event |
+| on-back  | 点击返回按钮触发的操作    |  |
 
 
 ### slot
 | slot名称      | 说明    | 
 |---------- |-------- |
-| 不具名slot  | button内容    | 
+| l  | 左侧内容区    | 
+| 不具名slot  | 中间内容区，默认显示标题    | 
+| r  | 右侧内容区    | 

@@ -1,4 +1,4 @@
-## rFlexFixed 吸顶或吸底(flex布局)
+## FlexFixed 吸顶或吸底(flex布局)
 
 #### 链接
 
@@ -33,12 +33,14 @@ or
 import RongUi2 from 'rong-ui2';
 import 'rong-ui2/dist/styles/rong-ui.css'
 Vue.use(RongUi2)
+
+如果提示“rongUI2 is not defined”报错信息，请确保.babelrc文件中不能有上面按需引入的配置
 ```
 
 ```html
 <template>
   <FlexFixed @on-scroll="scroll" @on-scroll-debounce="scrollDebounce">
-    <Titlebar slot="header"></Titlebar> 
+    <Titlebar slot="header">标题</Titlebar> 
     <p>content 1</p>
     <p>content </p>
     <p>content </p>

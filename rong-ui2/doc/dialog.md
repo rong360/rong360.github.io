@@ -39,6 +39,8 @@ or
 import RongUi2 from 'rong-ui2';
 import 'rong-ui2/dist/styles/rong-ui.css'
 Vue.use(RongUi2)
+
+如果提示“rongUI2 is not defined”报错信息，请确保.babelrc文件中不能有上面按需引入的配置
 ```
 
 
@@ -168,7 +170,7 @@ dialog实例方法通过`子类组件`覆盖基类组件的的方式实现，因
 ### slot
 | slot名称      | 说明    | 
 |---------- |-------- |
-| 无  | 弹框内容    | 
+| 不具名slot  | 弹框内容    | 
 
 ### 特别提示
 弹框里插入滚动区域时，需在滚动区域上添加"scroll-area"样式，如:
