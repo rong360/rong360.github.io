@@ -54,7 +54,13 @@ this.$toast({
 });
 
 this.$toast("芭芭拉小魔仙，变身");
+```
 
+or
+```js
+this.$toast.long("芭芭拉小魔仙，变身")
+this.$toast.positive("芭芭拉小魔仙，变身")
+this.$toast.negetive("芭芭拉小魔仙，变身")
 ```
 
 ### Attributes
