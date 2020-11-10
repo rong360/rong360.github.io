@@ -129,6 +129,12 @@ this.$dialog({
 </template>
 ```
 
+#### dialog 拓展
+```html
+1，this.$dialog.tip({ message: 'hello', confirmBtnText: 'Ok', onConfirm: function () { this.remove() } })
+2，this.$dialog.confirm({ message: 'hello', confirmBtnText: 'confirm', cancelBtnText: 'cancel', onConfirm: function () { }, onCancel: function () { this.remove() } })
+3, this.$dialog.select({ menus: [{title: '操作1'}, {title: '操作2'}], cancelBtnText: '取消', onCancel: function () { this.remove() }, onSelect: function (obj) { console.log(obj); this.remove() } })
+```
 ### Attributes
 
 dialog实例方法通过`子类组件`覆盖基类组件的的方式实现，因此传入的对象是组件相关的一些属性：propsData、methods、computed、mounted...
