@@ -106,20 +106,23 @@ this.$dialog({
 
 #### template模板中插入Dialog
 ```html
-在template模板中使用时，可借助portal-vue插件，把Dialog显示在文档的任意位置
+在template模板中使用时，可借助portal-vue插件，把Dialog显示在文档的任意位置。Dialog是否显示可通过v-model双向绑定，在回调函数中可通过第二个参数获得dialog实例关闭dialog
 // https://www.npmjs.com/package/portal-vue
 // https://portal-vue.linusb.org/api/portal.html
 <template>
     <div>
         <portal to="modal">
-            <Dialog :showCancelBtn="false" @on-confirm="onConfirm" @on-cancel="onCancel">
+            <Dialog v-model="showDialog" :showCancelBtn="false" @on-confirm="onConfirm" @on-cancel="onCancel">
                 <p>test</p>
                 <div class="hasread" @click="doRead">我已经阅读 <a href="javascript:;">《用户知情书》</a></div>
             </Dialog> 
         </portal>
     </div>
 </template>
-
+onCancel (e, dialog) {
+  // this.showDialog = false
+  dialog.remove()
+},
 ------ app.vue ------
 <template>
   <div id="app">
@@ -133,7 +136,7 @@ this.$dialog({
 ```html
 1，this.$dialog.tip({ message: 'hello', confirmBtnText: 'Ok', onConfirm: function () { this.remove() } })
 2，this.$dialog.confirm({ message: 'hello', confirmBtnText: 'confirm', cancelBtnText: 'cancel', onConfirm: function () { }, onCancel: function () { this.remove() } })
-3, this.$dialog.select({ menus: [{title: '操作1'}, {title: '操作2'}], cancelBtnText: '取消', onCancel: function () { this.remove() }, onSelect: function (obj) { console.log(obj); this.remove() } })
+3，this.$dialog.select({ menus: [{title: '操作1'}, {title: '操作2'}], cancelBtnText: '取消', onCancel: function () { this.remove() }, onSelect: function (obj) { console.log(obj); this.remove() } })
 ```
 ### Attributes
 

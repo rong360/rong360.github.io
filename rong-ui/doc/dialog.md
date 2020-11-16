@@ -138,9 +138,10 @@ dialog实例方法通过`子类组件`覆盖基类组件的的方式实现，因
 
 | 事件名称      | 说明    | 回调参数      |
 |---------- |-------- |---------- |
-| onCancel  | 取消操作    | — |
-| onConfirm  | 确认操作    | — |
-| onClose  | 关闭点击操作    | — |
+| onCancel  | 取消操作    | (e, dialog) |
+| onConfirm  | 确认操作    | (e, dialog) |
+| onClose  | 关闭操作    | (e, dialog) |
+| onMask  | 点击蒙层    | (e, dialog) |
 
 
 ### slot
