@@ -51,6 +51,8 @@ Vue.use(RongUi2)
 | label-width | lebel标签宽度 | string | 如 `150px` `10rem`等 |-|
 | label-position | label标签对齐方式 | string | `left` `right` `top`  | `left` |
 | text-position | select文字对齐方式 | string | `left` `center` `right`  | `left` |
+| cancel-btn-text | 取消按钮文案 | string |   | `取消` |
+| confirm-btn-text | 确认按钮文案 | string |   | `确认` |
 | select-arrow-style | 清空按钮样式 | object | - | {} |
 | show-message | 是否显示错误信息 | boolean | - | true |
 
@@ -66,6 +68,8 @@ Vue.use(RongUi2)
 | disabled  | 输入框是否禁用   | boolean   |  | `false` |
 | readonly  | 输入框是否只读    | boolean   |  | `false` |
 | unit  | 输入项单位    | string   |  | `""` |
+| cancelBtnText  | 取消按钮文案    | string   |  | `取消` |
+| confirmBtnText  | 确定按钮文案    | string   |  | `取消` |
 | rules  | 类iview风格的校验规则    | array   |  | `[{required: true, message:'xxx不能为空', trigger:'blur'}]` |
 
 	特别说明，rules校验规则文档详见https://www.npmjs.com/package/async-validator
@@ -85,6 +89,7 @@ Vue.use(RongUi2)
 |---------- |-------- |
 | prepend  | 前置内容 | 
 | append  | 后置内容 | 
+| arrow-icon  | 右侧箭头 | 
 
 
 #### 示例代码：

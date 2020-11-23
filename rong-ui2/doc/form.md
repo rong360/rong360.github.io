@@ -53,6 +53,8 @@ Vue.use(RongUi2)
 | text-position | input文字对齐方式 | string | `left` `center` `right`  | `left` |
 | input-clear-style | 清空按钮样式 | object | - | {} |
 | select-arrow-style | 清空按钮样式 | object | - | {} |
+| select-cancel-btn-text | select取消按钮文案 | string | - | `取消` |
+| select-confirm-btn-text | select确定按钮文案 | string | - | `确定` |
 | show-message | 是否显示错误信息 | boolean | - | true |
 
 
