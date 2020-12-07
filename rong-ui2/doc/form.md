@@ -55,7 +55,10 @@ Vue.use(RongUi2)
 | select-arrow-style | 清空按钮样式 | object | - | {} |
 | select-cancel-btn-text | select取消按钮文案 | string | - | `取消` |
 | select-confirm-btn-text | select确定按钮文案 | string | - | `确定` |
+| date-picker-cancel-btn-text | date-picker取消按钮文案 | string | - | `取消` |
+| date-picker-confirm-btn-text | date-picker确定按钮文案 | string | - | `确定` |
 | show-message | 是否显示错误信息 | boolean | - | true |
+| mode  | title添加css效果    | string   | `default` `to-top`  | `default` |
 
 
 ### Events
