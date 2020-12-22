@@ -69,6 +69,7 @@ Vue.use(RongUi2)
 | unit  | 输入项单位    | string   |  | `""` |
 | rules  | 类iview风格的校验规则    | array   |  | `[{required: true, message:'xxx不能为空', trigger:'blur'}]` |
 | mode  | title添加css效果    | string   | `default` `to-top`  | `default` |
+| error-at-placeholder  | error显示在placeholder位置   | boolean | - | false |
 
 	特别说明，rules校验规则文档详见https://www.npmjs.com/package/async-validator
 

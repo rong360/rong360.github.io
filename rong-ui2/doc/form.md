@@ -59,6 +59,7 @@ Vue.use(RongUi2)
 | date-picker-confirm-btn-text | date-picker确定按钮文案 | string | - | `确定` |
 | show-message | 是否显示错误信息 | boolean | - | true |
 | mode  | title添加css效果    | string   | `default` `to-top`  | `default` |
+| error-at-placeholder  | error显示在placeholder位置   | boolean | - | false |
 
 
 ### Events
