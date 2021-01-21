@@ -49,20 +49,31 @@ data(){
       title: '爸爸生日',
       name: 'birthday',
       value: '',
-      type: '',
       placeholder: '请选择',
-      valueFormat: 'yyyy/mm/dd',
-      textFormat: 'yyyy年mm月dd日',
-      startYear: '',
-      endYear: '',
-      yearsLength: '4',
-      disabled: false,
-      pickerYearUnit: '',
-      pickerMonthUnit: '',
-      pickerDateUnit: '',
-      pickerTitle: 'hello',
-      pickerCancelBtnText: 'cancel',
-      pickerConfirmBtnText: 'confirm',
+			valueFormat: 'yyyy/mm/dd',
+			// textFormat: 'yyyy年mm月dd日',
+			textFormat (val) {
+				return `${val.year.text},${val.month.text.substr(0, 4)},${val.day.text}`
+			},
+			startYear: '',
+			endYear: '',
+			offsetYear: '',
+			yearsLength: '',
+			disabled: false,
+			language: 'en',
+			pickerFormatter: function (type, val) {
+				// if (type == 'year') {
+				//   return val + '年'
+				// } else if (type == 'month') {
+				//   return val + '月'
+				// } else if (type == 'day') {
+				//   return val + '日'
+				// }
+			},
+			pickerTitle: 'hello',
+			pickerCancelBtnText: 'cancel',
+			pickerConfirmBtnText: 'confirm',
+			columnsOrder: ['year', 'month', 'day']
       textPosition: 'right',
       mode: ''
     }

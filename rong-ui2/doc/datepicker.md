@@ -46,21 +46,32 @@ Vue.use(RongUi2)
 data(){
 	return {
 		config: {
-			value: '',
-			type: '',
+			value: '2022/10/22',
 			placeholder: '请选择',
 			valueFormat: 'yyyy/mm/dd',
-			textFormat: 'dd/mm/yyyy',
+			// textFormat: 'yyyy年mm月dd日',
+			textFormat (val) {
+				return `${val.year.text},${val.month.text.substr(0, 4)},${val.day.text}`
+			},
 			startYear: '',
 			endYear: '',
-			yearsLength: '4',
+			offsetYear: '',
+			yearsLength: '',
 			disabled: false,
-			pickerYearUnit: '',
-			pickerMonthUnit: '',
-			pickerDateUnit: '',
+			language: 'en',
+			pickerFormatter: function (type, val) {
+				// if (type == 'year') {
+				//   return val + '年'
+				// } else if (type == 'month') {
+				//   return val + '月'
+				// } else if (type == 'day') {
+				//   return val + '日'
+				// }
+			},
 			pickerTitle: 'hello',
 			pickerCancelBtnText: 'cancel',
-			pickerConfirmBtnText: 'confirm'
+			pickerConfirmBtnText: 'confirm',
+			columnsOrder: ['year', 'month', 'day']
 		}
 	}
 },
@@ -77,21 +88,20 @@ methods: {
 
 | 参数      | 说明    | 类型      | 可选值       | 默认值   |
 |---------- |-------- |---------- |-------------  |-------- |
-| type  | 日期类型，年，年月，年月日三种    | string   | `year,month,date` | `date` |
 | value | 默认显示日期 | string | | |
-| valueFormat | value日期格式 | string | `yyyy` `yyyy/mm` `yyyy-mm-dd` `yyyy年` `yyyy年mm月dd日`等 |  `yyyy/mm/dd` |
-| textFormat | placeholder区域日期显示格式 | string | `yyyy` `yyyy/mm` `yyyy-mm-dd` `yyyy年` `yyyy年mm月dd日`等 |  `yyyy/mm/dd` |
+| valueFormat | value日期格式 | string, function | `yyyy` `yyyy/mm` `yyyy-mm-dd` `yyyy年` `yyyy年mm月dd日`等 |  `yyyy/mm/dd` |
+| textFormat | placeholder区域日期显示格式 | string, function | `yyyy` `yyyy/mm` `yyyy-mm-dd` `yyyy年` `yyyy年mm月dd日`等 |  `yyyy/mm/dd` |
 | placeholder  | 日期选择提示词    | string   |  | `请选择日期` |
 | disabled  | 是否禁用   | boolean   |  | `false` |
 | startYear  | 起始年份    | string,number   |  |  this year |
 | endYear  | 截止年份    | string,number   |  |  |
+| offsetYear  | startYear的偏移量    | string,number   | 负数、0、正数 | `0` |
 | yearsLength  | 年份跨度    | string,number   |  | `10` |
-| pickerYearUnit  | picker年单位    | string   |  | `年` |
-| pickerMonthUnit  | picker月单位    | string   |  | `月` |
-| pickerDateUnit  | picker日单位    | string   |  | `日` |
+| language  | 语言(月份可显示英文等)    | string   | `zh` `en` `id` | `zh` |
 | pickerTitle  | picker标题   | string   |  | `` |
 | pickerCancelBtnText  | picker取消按钮文案   | string   |  | `取消` |
 | pickerConfirmBtnText  | picker确定按钮文案   | string   |  | `确定` |
+| pickerFormatter  | 可设置picker上年月日单位等   | function   | 回调参数(type, val) | `` |
 
 
 ### Events
