@@ -97,6 +97,7 @@ methods: {
 | endYear  | 截止年份    | string,number   |  |  |
 | offsetYear  | startYear的偏移量    | string,number   | 负数、0、正数 | `0` |
 | yearsLength  | 年份跨度    | string,number   |  | `10` |
+| columnsOrder  | 年月日顺序    | array   |  | `['year', 'month', 'day']` |
 | language  | 语言(月份可显示英文等)    | string   | `zh` `en` `id` | `zh` |
 | pickerTitle  | picker标题   | string   |  | `` |
 | pickerCancelBtnText  | picker取消按钮文案   | string   |  | `取消` |
