@@ -82,6 +82,27 @@ this.$dialog({
         rContent: resolve => resolve(require('./repaymentTip.vue'))
     }
 })
+
+v1.1.2版本开始 message支持Rende 写法
+let RepaymentTip = resolve => resolve(require("./repaymentTip.vue"))
+this.$dialog({
+    propsData: {
+        // 内容(文本或自定义组件)
+        message: (h) => h(RepaymentTip, {
+        props: {
+            name: 'zyx'
+            }
+        })
+    },
+    methods: {
+        onCancel: function () {
+            this.remove();
+        },
+        onConfirm: function () {
+            this.remove();
+        }
+    }
+});
 ------ ./repaymentTip.vue ------
 <template>
     <div>
