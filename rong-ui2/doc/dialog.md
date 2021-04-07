@@ -83,7 +83,7 @@ this.$dialog({
     }
 })
 
-v1.1.2版本开始 message支持Rende 写法
+v1.1.2版本开始 message支持Render 写法
 let RepaymentTip = resolve => resolve(require("./repaymentTip.vue"))
 this.$dialog({
     propsData: {
@@ -106,7 +106,7 @@ this.$dialog({
 ------ ./repaymentTip.vue ------
 <template>
     <div>
-        hello {{rContentData.user}}
+        hello {{rContentData.user}} -- {{name}}
     </div>
 </template>
 
@@ -114,12 +114,19 @@ this.$dialog({
     export default {
         name: 'repaymentTip',
         props: {
+            name: String,
             rContentData: {
                 type: Object,
                 default: function(){
                     return {}
                 }
             }
+        },
+        mounted () {
+            // this.$parent.resetPos()
+        },
+        updated () {
+            // this.$parent.resetPos()
         }
     }
 </script>
