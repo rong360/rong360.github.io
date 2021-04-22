@@ -55,6 +55,8 @@ Vue.use(RongUi2)
 | confirm-btn-text | 确认按钮文案 | string |   | `确认` |
 | select-arrow-style | 清空按钮样式 | object | - | {} |
 | show-message | 是否显示错误信息 | boolean | - | true |
+| required（v1.1.3） | 是否必填 | boolean | - | true |
+| className（v1.1.3） | 自定义class | string | - | - |
 
 
 ### Select组件的配置通过attrs传入，attrs下各参数说明过如下：
@@ -73,6 +75,8 @@ Vue.use(RongUi2)
 | rules  | 类iview风格的校验规则    | array   |  | `[{required: true, message:'xxx不能为空', trigger:'blur'}]` |
 | mode  | title添加css效果    | string   | `default` `to-top`  | `default` |
 | error-at-placeholder  | error显示在placeholder位置   | boolean | - | false |
+| required（v1.1.3）  | 是否必填   | boolean | - | true |
+| className（v1.1.3）  | 自定义class   | string | - | - |
 
 	特别说明，rules校验规则文档详见https://www.npmjs.com/package/async-validator
 ### Events

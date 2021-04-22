@@ -70,3 +70,4 @@ Vue.use(RongUi2)
 | slot名称      | 说明    | 
 |---------- |-------- |
 | 不具名slot  | checkbox标题   | 
+| prepend  | 前置内容(v.1.1.4) | 

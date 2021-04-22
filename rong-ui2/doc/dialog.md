@@ -179,7 +179,7 @@ dialog实例方法通过`子类组件`覆盖基类组件的的方式实现，因
 | titleStyleObj  | 标题样式    | Object   | — | {} |
 | showCloseBtn  | 是否显示关闭按钮    | boolean   | — | `false` |
 | closeStyleObj  | 标题样式    | Object   | — | {} |
-| message  | 弹框内容（普通文本或简单html）    | string   | — | '' |
+| message  | 弹框内容（普通文本或简单html，v1.1.2支持render函数）    | string, function  | — | '' |
 | contentStyleObj  | 内容样式    | object   | — | {} |
 | rContent | 弹窗内容部分需要插入组件时，通过rContent传入需要插入的组件,例如：```html components: {rContent: require('xxx.vue')}``` | object | - | - |
 | rContentData | 弹窗内容部分为rContent组件时，rContentData为组件所需数据，例如：propsData: { rContentData: { message: "hello" }} | object | - | - |
@@ -193,7 +193,7 @@ dialog实例方法通过`子类组件`覆盖基类组件的的方式实现，因
 | dlgStyleObj  | 弹框样式    | object   | — |  |
 | position  | 弹框位置    | object   | {x: 'left/center/right',y: 'top/center/bottom'} | {x: 'center', y: 'center'} |
 | removeDialogOnHashChange | hash变化时是否移除dialog | boolean | — | `false` |
-
+| className(v1.1.3) | 自定义样式 | string | — | `''` |
 
 ### Events
 
@@ -233,10 +233,34 @@ this.$dialog({
         rContent: resolve => resolve(require('./repaymentTip.vue'))
     }
 })
+
+v1.1.2支持render函数
+let RepaymentTip = resolve => resolve(require("./repaymentTip.vue"))
+this.$dialog({
+    propsData: {
+        className: 'custom-tip',
+        // 内容(文本或自定义组件)
+        message: (h) => h(RepaymentTip, {
+            props: {
+                name: 'zyx'
+            }
+        })
+    },
+    methods: {
+        // 取消按钮
+        onCancel: function () {
+            this.remove();
+        },
+        // 确认按钮
+        onConfirm: function () {
+            this.remove();
+        }
+    }
+});
 ------ ./repaymentTip.vue ------
 <template>
     <div>
-        hello {{rContentData.user}}
+        hello {{rContentData.user}} -- {{name}}
     </div>
 </template>
 
@@ -244,6 +268,7 @@ this.$dialog({
     export default {
         name: 'repaymentTip',
         props: {
+            name: String,
             rContentData: {
                 type: Object,
                 default: function(){
