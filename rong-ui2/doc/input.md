@@ -73,6 +73,7 @@ Vue.use(RongUi2)
 | error-at-placeholder  | error显示在placeholder位置   | boolean | - | false |
 | required（v1.1.3）  | 是否必填   | boolean | - | true |
 | className（v1.1.3）  | 自定义class   | string | - | - |
+| emailList（v1.1.5）  | 邮件后缀列表 | array | - | - |
 
 	特别说明，rules校验规则文档详见https://www.npmjs.com/package/async-validator
 
@@ -235,6 +236,19 @@ export default {
         "desc": "",
         "value": "",
         "readonly": 0,
+        "emailList": [
+          "qq.com",
+          "sina.com",
+          "sohu.com",
+          "163.com",
+          "foxmail.com",
+          "gmail.com",
+          "rong360.com",
+          "edu.cn",
+          "outlook.com",
+          "vip.qq.com",
+          "126.com"
+        ],
         "rules": [{
           "required": true,
           "message": "邮箱不能为空",
