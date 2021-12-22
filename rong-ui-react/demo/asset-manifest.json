@@ -40,7 +40,7 @@
     "Toast.css": "./static/css/Toast.chunk.css?t=0e433876",
     "Toast.js": "./static/js/Toast.chunk.js?t=b369c94f",
     "main.css": "./static/css/main.chunk.css?t=4cdc6fc0",
-    "main.js": "./static/js/main.chunk.js?t=9e0c6a1d",
+    "main.js": "./static/js/main.chunk.js?t=cd64ada3",
     "runtime-main.js": "./static/js/runtime-main.js?t=9510bceb",
     "static/js/22.chunk.js?t=57584639": "./static/js/22.chunk.js?t=57584639",
     "static/js/23.chunk.js?t=fddfaf54": "./static/js/23.chunk.js?t=fddfaf54",
@@ -50,6 +50,6 @@
     "static/js/runtime-main.js?t=9510bceb",
     "static/js/22.chunk.js?t=57584639",
     "static/css/main.chunk.css?t=4cdc6fc0",
-    "static/js/main.chunk.js?t=9e0c6a1d"
+    "static/js/main.chunk.js?t=cd64ada3"
   ]
 }
